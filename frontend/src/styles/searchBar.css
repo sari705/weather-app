@@ -1,0 +1,53 @@
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 350px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    text-align: left;
+}
+
+.search-button {
+    background-color: green;
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px; /* זהה לגובה ה-input */
+}
+
+.search-button:hover {
+    background-color: darkgreen;
+}
+
+/* התאמה למסכים קטנים */
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .search-button {
+        width: 100%;
+    }
+}
