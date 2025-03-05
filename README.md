@@ -34,7 +34,7 @@ A simple weather application built with **React** for the frontend and **Node.js
 
 ### **1️⃣ Clone the Repository**
 ```sh
-git clone https://github.com/YOUR_GITHUB_USERNAME/weather-app.git
+git clone https://github.com/sari705/weather-app.git
 cd weather-app
 ```
 
