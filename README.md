@@ -56,7 +56,7 @@ npm install
 ## 🏃‍♂️ Running the Application
 
 ### **Start the Backend Server**
-1. Navigate to the `server` folder.
+1. Navigate to the `backend` folder.
 2. Create a **.env** file and add:
     ```env
     WEATHER_API_URI=your_api_url
@@ -64,15 +64,15 @@ npm install
     ```
 3. Run the backend server:
     ```sh
-    npm start
+    node server
     ```
    The server will run on `http://localhost:5000`.
 
 ### **Start the Frontend**
-1. Navigate to the `client` folder.
+1. Navigate to the `frontend` folder.
 2. Start the React app:
     ```sh
-    npm start
+    npm run dev
     ```
    The frontend will be available at `http://localhost:3000`.
 
@@ -124,8 +124,8 @@ This project is licensed under the **MIT License**. Feel free to modify and use 
 ## 📩 Contact
 If you have any questions, feel free to reach out!
 
-📧 Email: your-email@example.com  
-🐙 GitHub: [your-github-username](https://github.com/YOUR_GITHUB_USERNAME)
+📧 Email: sari125705@gmail.com
+🐙 GitHub: sari705(https://github.com/sari705)
 
 ---
 
