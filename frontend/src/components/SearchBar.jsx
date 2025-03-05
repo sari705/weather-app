@@ -49,6 +49,7 @@ function SearchBar(props) {
             ברגע שהתוכן משתנה מעדכנים את המשתנה בסטייט
             אם המשתמש מקיש על enter
             מופעלת הפונקציה לטעינת מזג אויר */}
+            {/* <label className="search-label">Enter city</label> */}
             <input
                 className="search-input"
                 type="text"
@@ -61,13 +62,13 @@ function SearchBar(props) {
                         getWeatherByCity(choiseCity)
                     }
                 }}
+                autoComplete="off"
             />
             {/* כפתור לשליחת שם העיר לחיפוש מזג אויר
             בלחיצה על הכפתור מופעלת הפונקציה 
             למציאת מזג האויר לאותה עיר */}
-            <button className="search-button" onClick={() => { getWeatherByCity(choiseCity) }}>search</button>
+            <button className="search-button" onClick={() => { getWeatherByCity(choiseCity) }}>Check</button>
         </div>
-
     );
 }
 

@@ -1,7 +1,7 @@
 :root {
   font-family: "Heebo", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   line-height: 1.5;
   color-scheme: light dark;
@@ -16,6 +16,6 @@
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #e1dfdf81;
   }
 }

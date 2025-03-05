@@ -9,7 +9,6 @@ function Home() {
     // משתנה בסטייט המכיל את פרטי מזג האויר
     const [weatherDetails, setWeatherDetails] = useState({})
 
-
     return (
         <div className="home-container">
             {/* צד שמאל - חיפוש וטקסט */}
