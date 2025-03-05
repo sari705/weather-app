@@ -8,7 +8,10 @@ app.use(express.json())
 
 
 app.use("/api/weather", weatherRouter)
+
 let port = process.env.PORT || 8000;
+
 app.listen(port, "localhost", () => {
     console.log(`app is runing on port ${port}`);
 })
+
