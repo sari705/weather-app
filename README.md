@@ -1,89 +1,133 @@
-# 🌤️ Weather App
+# Weather App 🌤️
 
-Weather App is an interactive application that displays real-time weather information based on the user's searched city, including temperature, humidity, wind speed, and hourly forecasts.
+A simple weather application built with **React** for the frontend and **Node.js (Express)** for the backend. The app allows users to search for a city's weather and displays real-time weather conditions.
 
-## 📌 Key Features
-- 🔎 **City Search** – Users can enter a city name and receive real-time weather data.
-- 🌡️ **Weather Data** – Displays current temperature, weather conditions, humidity, and wind speed.
-- ⏳ **Hourly Forecast** – Provides weather data for two hours back and two hours forward.
-- 🎨 **Modern UI** – Responsive design with well-structured weather cards.
+## 📸 Preview
+![Weather App Screenshot](./assets/weather-app-preview.png)
 
----
-
-## 🛠️ Technologies Used
-The project is built using:
-- **Frontend:** React, CSS
-- **Backend:** Node.js, Express.js
-- **API:** [WeatherAPI](https://www.weatherapi.com/)
-- **State Management:** useState
+> Replace `./assets/weather-app-preview.png` with the actual path where your screenshot is stored.
 
 ---
 
-## 🚀 How to Run the Project
+## 📌 Features
+- 🌍 Search for weather in any city worldwide.
+- 🌡 Uses an external weather API.
+- 📊 Displays current temperature, humidity, wind speed, and precipitation.
+- 🥒 Shows hourly forecast (2 hours before and after the current time).
+- 🎨 Responsive and clean UI.
 
-### 1️⃣ Clone the Repository:
-```bash
-git clone https://github.com/username/weather-app.git
+---
+
+## 🛠️ Tech Stack
+### **Frontend**
+- React.js
+- CSS (custom styling)
+
+### **Backend**
+- Node.js with Express.js
+- Axios for API requests
+- dotenv for environment variables
+
+---
+
+## 🚀 Getting Started
+
+### **1️⃣ Clone the Repository**
+```sh
+git clone https://github.com/YOUR_GITHUB_USERNAME/weather-app.git
 cd weather-app
 ```
 
-### 2️⃣ Install Dependencies:
-```bash
+### **2️⃣ Install Dependencies**
+#### **Frontend**
+```sh
+cd client
 npm install
 ```
 
-### 3️⃣ Set Up Environment Variables (ENV)
-Create a `.env` file in the root directory and add:
+#### **Backend**
+```sh
+cd server
+npm install
+```
+
+---
+
+## 🏃‍♂️ Running the Application
+
+### **Start the Backend Server**
+1. Navigate to the `server` folder.
+2. Create a **.env** file and add:
+    ```env
+    WEATHER_API_URI=your_api_url
+    WEATHER_API_KEY=your_api_key
+    ```
+3. Run the backend server:
+    ```sh
+    npm start
+    ```
+   The server will run on `http://localhost:5000`.
+
+### **Start the Frontend**
+1. Navigate to the `client` folder.
+2. Start the React app:
+    ```sh
+    npm start
+    ```
+   The frontend will be available at `http://localhost:3000`.
+
+---
+
+## ⚙️ Environment Variables
+Create a `.env` file inside the **server** directory and add the following:
 ```env
 WEATHER_API_URI=https://api.weatherapi.com/v1/forecast.json
-WEATHER_API_KEY=your_weather_api_key
+WEATHER_API_KEY=your_api_key
 ```
 
-### 4️⃣ Start the Server:
-```bash
-npm start
+Replace `your_api_key` with your actual API key.
+
+---
+
+## 🐂 Project Structure
+
+```
+weather-app/
+│── client/               # React Frontend
+│   ├── src/
+│   │   ├── components/   # UI Components
+│   │   ├── styles/       # CSS Styles
+│   │   ├── services/     # API Requests
+│   │   ├── App.js        # Main React App
+│   │   ├── index.js      # React Entry Point
+│   ├── public/           # Static Files
+│   ├── package.json      # Frontend Dependencies
+│
+│── server/               # Node.js Backend
+│   ├── routes/           # API Routes
+│   ├── .env              # Environment Variables
+│   ├── index.js          # Main Express Server
+│   ├── package.json      # Backend Dependencies
+│
+│── assets/               # Screenshots & Images
+│── README.md             # Documentation
+│── .gitignore            # Files to Ignore
 ```
 
 ---
 
-## 🖥️ Project Structure
-```
-📂 weather-app
- ┣ 📂 src
- ┃ ┣ 📂 components
- ┃ ┃ ┣ 📜 SearchBar.jsx
- ┃ ┃ ┣ 📜 WeatherDisplay.jsx
- ┃ ┣ 📂 styles
- ┃ ┃ ┣ 📜 weatherDisplay.css
- ┃ ┃ ┣ 📜 searchBar.css
- ┃ ┣ 📜 App.js
- ┃ ┣ 📜 index.js
- ┣ 📂 server
- ┃ ┣ 📜 index.js
- ┃ ┣ 📜 api.js
- ┣ 📜 package.json
- ┣ 📜 README.md
- ┗ 📜 .env
-```
-
----
-
-## 📷 Screenshot
-![Weather App Screenshot](screenshot.png)
-
----
-
-## 💡 Future Improvements
-- ⏩ Support for GPS-based location detection.
-- 📅 Weekly weather forecast.
-- 🎨 Customizable themes and colors.
+## 📝 License
+This project is licensed under the **MIT License**. Feel free to modify and use it.
 
 ---
 
 ## 📩 Contact
-For questions or suggestions, contact us on [GitHub](https://github.com/username).
+If you have any questions, feel free to reach out!
+
+📧 Email: your-email@example.com  
+🐙 GitHub: [your-github-username](https://github.com/YOUR_GITHUB_USERNAME)
 
 ---
 
-**⭐ If you like this project, don't forget to give it a star!**
+This **README.md** provides everything a user needs to **install**, **run**, and **understand** your project. 🚀 Let me know if you need any adjustments! 🎯
 
