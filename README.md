@@ -59,7 +59,6 @@ npm install
 1. Navigate to the `backend` folder.
 2. Create a **.env** file and add:
     ```env
-    WEATHER_API_URI=your_api_url
     WEATHER_API_KEY=your_api_key
     ```
 3. Run the backend server:
@@ -78,41 +77,43 @@ npm install
 
 ---
 
-## ⚙️ Environment Variables
-Create a `.env` file inside the **server** directory and add the following:
-```env
-WEATHER_API_URI=https://api.weatherapi.com/v1/forecast.json
-WEATHER_API_KEY=your_api_key
-```
-
-Replace `your_api_key` with your actual API key.
-
----
-
 ## 🐂 Project Structure
 
 ```
 weather-app/
-│── client/               # React Frontend
-│   ├── src/
-│   │   ├── components/   # UI Components
-│   │   ├── styles/       # CSS Styles
-│   │   ├── services/     # API Requests
-│   │   ├── App.js        # Main React App
-│   │   ├── index.js      # React Entry Point
-│   ├── public/           # Static Files
-│   ├── package.json      # Frontend Dependencies
+│── backend/               # Node.js Backend
+│   ├── Controllers/       # API Controllers
+│   ├── Routes/            # Express Routes
+│   ├── node_modules/      # Backend dependencies
+│   ├── .env               # Environment Variables
+│   ├── .env.example       # Example Environment Variables
+│   ├── .gitignore         # Git Ignore File
+│   ├── package.json       # Backend Dependencies
+│   ├── package-lock.json  # Backend Lock File
+│   ├── server.js          # Main Express Server
+│   ├── weather.js         # Weather API Service
 │
-│── server/               # Node.js Backend
-│   ├── routes/           # API Routes
-│   ├── .env              # Environment Variables
-│   ├── index.js          # Main Express Server
-│   ├── package.json      # Backend Dependencies
+│── frontend/              # React Frontend
+│   ├── node_modules/      # Frontend dependencies
+│   ├── public/            # Static Files
+│   ├── src/               # Source Code
+│   │   ├── assets/        # Static Images
+│   │   ├── components/    # UI Components
+│   │   ├── pages/         # Page Components
+│   │   ├── services/      # API Requests
+│   │   ├── styles/        # CSS Styles
+│   │   ├── App.jsx        # Main React App
+│   │   ├── App.css        # Main CSS
+│   │   ├── index.jsx      # React Entry Point
+│   │   ├── index.css      # Global Styles
+│   │   ├── main.jsx       # App Entry
+│   ├── .gitignore         # Git Ignore File
+│   ├── eslint.config.js   # ESLint Configuration
+│   ├── index.html         # HTML Template
+│   ├── package.json       # Frontend Dependencies
+│   ├── package-lock.json  # Frontend Lock File
 │
-│── assets/               # Screenshots & Images
-│── README.md             # Documentation
-│── .gitignore            # Files to Ignore
-```
+│── README.md              # Documentation
 
 ---
 
