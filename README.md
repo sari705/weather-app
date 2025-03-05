@@ -3,7 +3,7 @@
 A simple weather application built with **React** for the frontend and **Node.js (Express)** for the backend. The app allows users to search for a city's weather and displays real-time weather conditions.
 
 ## 📸 Preview
-![Website Preview](assets/images/screenshot.png)
+![Website Preview](frontend/src/assets/images/screenshot.png)
 
 > Replace `./assets/weather-app-preview.png` with the actual path where your screenshot is stored.
 
