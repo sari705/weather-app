@@ -50,7 +50,6 @@
     color: #A8C6CB;
 }
 
-/* טמפרטורה */
 .weather-main h1 {
     font-size: 130px;
     font-weight: bold;
@@ -59,7 +58,6 @@
     letter-spacing: -8px;
 }
 
-/* תיאור מזג האוויר */
 .condition-text {
     font-size: 30px;
     font-weight: 250;
@@ -69,7 +67,6 @@
     color: #E8F1F2;
 }
 
-/* אזור הנתונים */
 .weather-info {
     margin-top: 6vh;
     display: flex;
@@ -78,26 +75,22 @@
     margin-bottom: 30px;
 }
 
-/* התוויות הקטנות */
 .info-title {
     font-size: 20px;
     text-transform: lowercase;
     color: #E8F1F2;
-    /* צבע בהיר יותר */
     margin-bottom: 0px;
     opacity: 0.8;
     line-height: 0;
 
 }
 
-/* הערכים המודגשים */
 .info-value {
     font-size: 20px;
     font-weight: bold;
     color: white;
 }
 
-/* התאמה למסכים קטנים */
 @media (max-width: 768px) {
     .weather-container {
         max-width: 80%;
@@ -121,19 +114,13 @@
     width: 700px;
     background-color: #DDE4E6;
     display: flex;
-    /* מאפשר יישור גמיש */
     justify-content: center;
-    /* ממרכז אופקית */
     align-items: center;
-    /* ממרכז אנכית */
     margin: auto;
-    /* מוודא שגם בקונטיינרים אחרים זה יתאים */
     border-radius: 4px;
     margin-top: 50px;
 }
 
-
-/* קונטיינר התחזית */
 .weather-forecast {
     display: flex;
     flex-direction: column;
@@ -141,24 +128,19 @@
     text-align: center;
 }
 
-/* שורות התחזית - שעות למעלה, טמפ' למטה */
 .forecast-row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
-    /* התאמת הרוחב של כל עמודה */
     justify-content: center;
 }
 
-/* שעה */
 .forecast-time {
     margin: 0;
     font-size: 18px;
-    /* opacity: 0.6; */
     line-height: 0.8;
     color: #A8C6CB;
 }
 
-/* טמפרטורה */
 .forecast-temp {
     font-size: 18px;
     font-weight: bold;

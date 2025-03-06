@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUri = "http://localhost:8800";
+const baseUri = import.meta.env.VITE_API_URI;
 
 export const getWeather = (city) => {
     return axios.get(`${baseUri}/api/weather?city=${city}`);
