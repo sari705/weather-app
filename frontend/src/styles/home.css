@@ -1,7 +1,6 @@
-/* הקונטיינר הראשי */
 .home-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 90%;
     max-width: 1300px;
@@ -9,7 +8,6 @@
     margin: auto;
 }
 
-/* צד שמאל - טקסט + חיפוש */
 .left-section {
     flex: 1;
     padding: 50px;
@@ -17,34 +15,33 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+    max-width: 40%;
+    margin-left: -80px;
 }
 
-/* כותרת */
 .left-section h1 {
     font-size: 32px;
-    font-weight: 50;
-    color: #797979;
+    font-weight: 250;
+    color: #707070;
     line-height: 1.5;
     margin-top: 100px;
+    margin-bottom: 8vh;
+    align-items: flex-start;    
 }
 
-/* הקואורדינטות */
 .coordinates {
     font-size: 14px;
-    color: gray;
+    color: #707070;
     margin-top: 250px;
 }
 
-/* צד ימין - כרטיס מזג האוויר */
 .right-section {
-    flex: 1;
+    flex: 1.5;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* התאמה למסכים קטנים */
 @media (max-width: 1024px) {
     .home-container {
         flex-direction: column;
@@ -54,14 +51,21 @@
 
     .left-section {
         text-align: center;
-        padding: 40px;
+        max-width: 90%;
+        padding: 30px;
+    }
+    .left-section h1{
+        margin-top: 600px;
     }
 
     .right-section {
+        width: 100%;
         justify-content: center;
     }
     .coordinates {
-        margin-top: 10px;
+        margin-top: 20px;
     }
 
 }
+
+

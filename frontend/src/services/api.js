@@ -1,6 +1,7 @@
 import axios from "axios";
 
+const baseUri = "http://localhost:8800";
 
-export function getWeather(city){
-    return axios.get(`http://localhost:8800/api/weather?city=${city}`);
+export const getWeather = (city) => {
+    return axios.get(`${baseUri}/api/weather?city=${city}`);
 }

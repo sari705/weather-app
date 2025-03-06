@@ -1,62 +1,64 @@
-/* קונטיינר החיפוש */
 .search-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px; /* רווח בין ה-input לכפתור */
+    gap: 10px;
     width: 100%;
-    max-width: 400px; /* גודל מרבי */
-    padding: 10px;
+    max-width: 400px;
+    padding: 5px;
     background: white;
     border-radius: 12px;
-    height: 35px;
-    margin-top: 10px;
-    margin-right: 100px;
+    height: 63px;
+    margin-top: 2vh;
+    padding-right: 14px;
+    padding-top: 14px;
+    padding-bottom: 13px;
+    box-sizing: border-box;
 }
 
+.search-label{
+    margin-left: 2%;
+}
 
-/* שדה הקלט */
+.error-message{
+    color: red;
+}
+
 .search-input {
     flex: 1;
-    padding: 12px;
-    font-size: 16px;
-    border: #cccccc00;
-    border-radius: 8px;
+    padding-left: 12px;
+    font-size: 22px;
+    border: none;
     outline: none;
-    height: 30px; /* גובה קבוע */
+    /* height: 60%; */
+    color: #363636;
+    text-align: left;
+    /* border-radius: 12px; */
 }
 
-
-/* כפתור החיפוש */
 .search-button {
-    background-color: rgb(0, 98, 0);
-    color: rgba(255, 255, 255, 0.707);
-    padding: 12px 20px;
+    background-color: #046B3B;
+    color: white;
+    padding: 10px 20px;
     border: none;
-    border-radius: 8px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
     transition: background 0.3s ease;
-    height: 42px; /* תואם ל-input */
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    border-radius: 8px;
+    width: 95px;
 }
 
 .search-button:hover {
     background-color: darkgreen;
 }
 
-/* התאמה למסכים קטנים */
 @media (max-width: 768px) {
     .search-container {
         flex-direction: column;
-        gap: 8px;
-        width: 90%;
+        max-width: 350px;
         height: 100px;
     }
 

@@ -1,19 +1,18 @@
-import "../styles/weatherDisplay.css"
+import "../styles/WeatherDisplay.css"
 
+const WeatherDisplay = ({ weatherDetails }) => {
 
-// פונקציה המציגה את כרטיס הפרטים על המזג אויר
-// מקבלת בפרופס אובייקט המכיל את כל הפרטים
-function WeatherDisplay({ weatherDetails }) {
-
-    // אם המשתנה ריק מוצגת הודעה שמורה למלא את תיבת החיפוש
-    if (!weatherDetails || !weatherDetails.location) {
-        return;
-    }
+    const now = parseInt((weatherDetails.current.last_updated.split(" ")[1]).split(":")[0])
+    const allHours = weatherDetails.forecastHours
+        .filter(hour => {
+            const hourNumber = new Date(hour.time).getHours();
+            return (hourNumber >= (now - 2 + 24) % 24) && (hourNumber <= (now + 2) % 24);
+        })
 
     return (
         <div className="weather-background">
             <div className="weather-container">
-                {/* שם העיר והמדינה */}
+
                 <div className="city-info">
                     <h1 className="city">{weatherDetails.location.name} </h1>
                     <h2 className="country">{weatherDetails.location.country}</h2>
@@ -22,16 +21,11 @@ function WeatherDisplay({ weatherDetails }) {
                     </p>
                 </div>
 
-
-
-                {/* תמונת המצב ומידע הטמפרטורה */}
                 <div className="weather-main">
                     <h1>{(weatherDetails.current.temp_c).toFixed()}<sup>°</sup></h1>
                     <p className="condition-text">{weatherDetails.current.condition.text}</p>
                 </div>
 
-
-                {/* מדדים נוספים */}
                 <div className="weather-info">
                     <div>
                         <p className="info-title">precipitation</p>
@@ -49,31 +43,18 @@ function WeatherDisplay({ weatherDetails }) {
 
                 <div className="weather-forecast">
                     <div className="forecast-row">
-                        {weatherDetails.forecastHours
-                            .filter(hour => {
-                                const now = parseInt((weatherDetails.current.last_updated.split(" ")[1]).split(":")[0])
-                                const hourNumber = new Date(hour.time).getHours();
-                                return (hourNumber >= (now - 2 + 24) % 24) && (hourNumber <= (now + 2) % 24);
-                            })
-                            .map(hour => (
-                                <p key={hour.time} className="forecast-time">{hour.time.split(" ")[1]}</p>
-                            ))}
+                        {allHours.map(hour => (
+                            <p key={hour.time} className="forecast-time">{hour.time.split(" ")[1]}</p>
+                        ))}
                     </div>
 
                     <div className="forecast-row">
-                        {weatherDetails.forecastHours
-                            .filter(hour => {
-                                const now = parseInt((weatherDetails.current.last_updated.split(" ")[1]).split(":")[0])
-                                const hourNumber = new Date(hour.time).getHours(); // השעה מתוך הנתונים
-                                return (hourNumber >= (now - 2 + 24) % 24) && (hourNumber <= (now + 2) % 24);
-                            })
-                            .map(hour => (
-                                <p key={hour.time} className="forecast-temp">{(hour.temp_c).toFixed()}°</p>
-                            ))}
+                        {allHours.map(hour => (
+                            <p key={hour.time} className="forecast-temp">{(hour.temp_c).toFixed()}°</p>
+                        ))}
                     </div>
                 </div>
             </div>
-
         </div>
     );
 }
