@@ -12,11 +12,10 @@ function SearchBar(props) {
 
 
     /*
-    פונקציה לטעינת מזג אויר מהשרת
-    הפונקציה מקבלת במשתנה את שם העיר ומבצעת בדיקה
-    שבמשתנה יש נתונים ולא משתנה ריק או רווחים
-    אם הבדיקה עברה בהצלחה פונה לשרת לקבל נתונים 
-    אם לא מקפיץ הודעה שיש להכניס שם עיר
+    The loadWeather function receives a city name, 
+    checks that it is not empty or only spaces. 
+    If valid, it requests weather data from the server; 
+    otherwise, it displays a message to enter a city name.
     */
     async function getWeatherByCity(city) {
         if (!city.trim()) {

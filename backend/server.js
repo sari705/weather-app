@@ -1,5 +1,5 @@
 import express from "express";
-import weatherRouter from "./weather.js";
+import weatherRouter from "./Routes/weather.js";
 import cors from "cors";
 const app = express();
 
