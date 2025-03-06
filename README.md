@@ -41,13 +41,13 @@ cd weather-app
 ### **2️⃣ Install Dependencies**
 #### **Frontend**
 ```sh
-cd client
+cd frontend
 npm install
 ```
 
 #### **Backend**
 ```sh
-cd server
+cd backend
 npm install
 ```
 
@@ -56,36 +56,24 @@ npm install
 ## 🏃‍♂️ Running the Application
 
 ### **Start the Backend Server**
-1. Navigate to the `server` folder.
+1. Navigate to the `backend` folder.
 2. Create a **.env** file and add:
     ```env
-    WEATHER_API_URI=your_api_url
     WEATHER_API_KEY=your_api_key
     ```
 3. Run the backend server:
     ```sh
-    npm start
+    node server
     ```
    The server will run on `http://localhost:5000`.
 
 ### **Start the Frontend**
-1. Navigate to the `client` folder.
+1. Navigate to the `frontend` folder.
 2. Start the React app:
     ```sh
-    npm start
+    npm run dev
     ```
    The frontend will be available at `http://localhost:3000`.
-
----
-
-## ⚙️ Environment Variables
-Create a `.env` file inside the **server** directory and add the following:
-```env
-WEATHER_API_URI=https://api.weatherapi.com/v1/forecast.json
-WEATHER_API_KEY=your_api_key
-```
-
-Replace `your_api_key` with your actual API key.
 
 ---
 
@@ -93,26 +81,39 @@ Replace `your_api_key` with your actual API key.
 
 ```
 weather-app/
-│── client/               # React Frontend
-│   ├── src/
-│   │   ├── components/   # UI Components
-│   │   ├── styles/       # CSS Styles
-│   │   ├── services/     # API Requests
-│   │   ├── App.js        # Main React App
-│   │   ├── index.js      # React Entry Point
-│   ├── public/           # Static Files
-│   ├── package.json      # Frontend Dependencies
+│── backend/               # Node.js Backend
+│   ├── Controllers/       # API Controllers
+│   ├── Routes/            # Express Routes
+│   ├── node_modules/      # Backend dependencies
+│   ├── .env               # Environment Variables
+│   ├── .env.example       # Example Environment Variables
+│   ├── .gitignore         # Git Ignore File
+│   ├── package.json       # Backend Dependencies
+│   ├── package-lock.json  # Backend Lock File
+│   ├── server.js          # Main Express Server
+│   ├── weather.js         # Weather API Service
 │
-│── server/               # Node.js Backend
-│   ├── routes/           # API Routes
-│   ├── .env              # Environment Variables
-│   ├── index.js          # Main Express Server
-│   ├── package.json      # Backend Dependencies
+│── frontend/              # React Frontend
+│   ├── node_modules/      # Frontend dependencies
+│   ├── public/            # Static Files
+│   ├── src/               # Source Code
+│   │   ├── assets/        # Static Images
+│   │   ├── components/    # UI Components
+│   │   ├── pages/         # Page Components
+│   │   ├── services/      # API Requests
+│   │   ├── styles/        # CSS Styles
+│   │   ├── App.jsx        # Main React App
+│   │   ├── App.css        # Main CSS
+│   │   ├── index.jsx      # React Entry Point
+│   │   ├── index.css      # Global Styles
+│   │   ├── main.jsx       # App Entry
+│   ├── .gitignore         # Git Ignore File
+│   ├── eslint.config.js   # ESLint Configuration
+│   ├── index.html         # HTML Template
+│   ├── package.json       # Frontend Dependencies
+│   ├── package-lock.json  # Frontend Lock File
 │
-│── assets/               # Screenshots & Images
-│── README.md             # Documentation
-│── .gitignore            # Files to Ignore
-```
+│── README.md              # Documentation
 
 ---
 
@@ -124,8 +125,8 @@ This project is licensed under the **MIT License**. Feel free to modify and use 
 ## 📩 Contact
 If you have any questions, feel free to reach out!
 
-📧 Email: your-email@example.com  
-🐙 GitHub: [your-github-username](https://github.com/YOUR_GITHUB_USERNAME)
+📧 Email: sari125705@gmail.com
+🐙 GitHub: sari705(https://github.com/sari705)
 
 ---
 

@@ -9,7 +9,7 @@ function SearchBar(props) {
     const { setWeatherDetails } = props;
     // משתנה בסטייט המכיל את תוכן תיבת הטקסט - שם העיר
     const [choiseCity, setChoiseCity] = useState("");
-
+    const [error, setError] = useState({})
 
     /*
     The loadWeather function receives a city name, 
@@ -19,11 +19,11 @@ function SearchBar(props) {
     */
     async function getWeatherByCity(city) {
         if (!city.trim()) {
-            alert("must enter city");
+            setError({ message: "Must enter a city name" });
             return;
         }
         if (/\d/.test(city)) {
-            alert("City name cannot contain numbers");
+            setError({ message: "City name cannot contain numbers" });
             return;
         }
         try {
@@ -37,7 +37,7 @@ function SearchBar(props) {
         }
         catch (e) {
             console.error("Error fetching weather data:", e);
-            alert(e.response?.data?.message || "Error fetching weather data")
+            setError({ message: e.response?.data?.message || "Error fetching weather data" });
         }
     }
 
@@ -49,12 +49,13 @@ function SearchBar(props) {
             אם המשתמש מקיש על enter
             מופעלת הפונקציה לטעינת מזג אויר */}
             {/* <label className="search-label">Enter city</label> */}
+            {error.message && <p className="error-message">{error.message}</p>}
             <input
                 className="search-input"
                 type="text"
                 name="city"
                 value={choiseCity}
-                onChange={(e) => { setChoiseCity(e.target.value) }}
+                onChange={(e) => { setChoiseCity(e.target.value); setError({}) }}
                 placeholder="Enter city name..."
                 onKeyDown={(e) => {
                     if (e.key === "Enter") {

@@ -53,8 +53,7 @@ function WeatherDisplay({ weatherDetails }) {
                             .filter(hour => {
                                 const now = parseInt((weatherDetails.current.last_updated.split(" ")[1]).split(":")[0])
                                 const hourNumber = new Date(hour.time).getHours();
-                                console.log("now: ", now);
-                                return hourNumber >= now - 2 && hourNumber <= now + 2;
+                                return (hourNumber >= (now - 2 + 24) % 24) && (hourNumber <= (now + 2) % 24);
                             })
                             .map(hour => (
                                 <p key={hour.time} className="forecast-time">{hour.time.split(" ")[1]}</p>
@@ -66,7 +65,7 @@ function WeatherDisplay({ weatherDetails }) {
                             .filter(hour => {
                                 const now = parseInt((weatherDetails.current.last_updated.split(" ")[1]).split(":")[0])
                                 const hourNumber = new Date(hour.time).getHours(); // השעה מתוך הנתונים
-                                return hourNumber >= now - 2 && hourNumber <= now + 2;
+                                return (hourNumber >= (now - 2 + 24) % 24) && (hourNumber <= (now + 2) % 24);
                             })
                             .map(hour => (
                                 <p key={hour.time} className="forecast-temp">{(hour.temp_c).toFixed()}°</p>
