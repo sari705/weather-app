@@ -13,9 +13,11 @@ const Home = () => {
                 <SearchBar setWeatherDetails={setWeatherDetails} />
                 {weatherDetails.location && (
                     <p className="coordinates">
-                        Latitude: {weatherDetails.location.lat} &nbsp;&nbsp;
-                        Longitude: {weatherDetails.location.lon} <br />
-                        Accurate to {weatherDetails.location.localtime}
+                        latitude: {weatherDetails.location.lat} &nbsp;&nbsp;
+                        longitude: {weatherDetails.location.lon} <br />
+                        {`${(weatherDetails.location.localtime).split(" ")[0]}
+                         at ${(weatherDetails.current.last_updated).split(" ")[1]}`}
+
                     </p>
                 )}
             </div>
