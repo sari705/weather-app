@@ -17,5 +17,10 @@
   :root {
     color: #213547;
     background-color: #F1F1F1;
+    background-image: url('../src/assets/images/logo.svg');
+    background-repeat: no-repeat;
+    background-size: 100px auto;
+    background-position: left top;
+    background-position: 40px 40px;
   }
 }

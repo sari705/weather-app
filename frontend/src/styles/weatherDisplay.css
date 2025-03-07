@@ -14,7 +14,6 @@
 
 .weather-container h2 {
     font-size: 22px;
-    font-weight: bold;
     margin-bottom: 0px;
 }
 
@@ -44,10 +43,11 @@
 }
 
 .country {
-    font-weight: 10;
     line-height: 1;
     font-size: 22px;
     color: #A8C6CB;
+    font-weight: 300;
+
 }
 
 .weather-main h1 {

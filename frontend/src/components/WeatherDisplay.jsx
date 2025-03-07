@@ -6,7 +6,13 @@ const WeatherDisplay = ({ weatherDetails }) => {
     const allHours = weatherDetails.forecastHours
         .filter(hour => {
             const hourNumber = new Date(hour.time).getHours();
-            return (hourNumber >= (now - 2 + 24) % 24) && (hourNumber <= (now + 2) % 24);
+            return [
+                (now - 2 + 24) % 24,
+                (now - 1 + 24) % 24,  
+                now,                  
+                (now + 1) % 24,       
+                (now + 2) % 24    
+            ].includes(hourNumber);
         })
 
     return (

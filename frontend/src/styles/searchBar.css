@@ -17,6 +17,7 @@
 
 .search-label{
     margin-left: 2%;
+    color: #707070;
 }
 
 .error-message{
@@ -29,15 +30,13 @@
     font-size: 22px;
     border: none;
     outline: none;
-    /* height: 60%; */
     color: #363636;
     text-align: left;
-    /* border-radius: 12px; */
 }
 
 .search-button {
     background-color: #046B3B;
-    color: white;
+    color: rgba(255, 255, 255, 0.829);
     padding: 10px 20px;
     border: none;
     cursor: pointer;
