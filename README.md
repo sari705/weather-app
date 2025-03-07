@@ -68,7 +68,11 @@ npm install
 
 ### **Start the Frontend**
 1. Navigate to the `frontend` folder.
-2. Start the React app:
+2. Create a **.env** file and add:
+    ```env
+    VITE_API_URI=your_server_uri
+    ```
+3. Start the React app:
     ```sh
     npm run dev
     ```
