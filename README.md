@@ -106,13 +106,14 @@ weather-app/
 │   │   ├── index.jsx      # React Entry Point
 │   │   ├── index.css      # Global Styles
 │   │   ├── main.jsx       # App Entry
+│   ├── .env               # Environment Variables
 │   ├── .gitignore         # Git Ignore File
 │   ├── eslint.config.js   # ESLint Configuration
 │   ├── index.html         # HTML Template
 │   ├── package.json       # Frontend Dependencies
 │   ├── package-lock.json  # Frontend Lock File
 │
-│── README.md              # Documentation
+│── README.md 
 
 ---
 
