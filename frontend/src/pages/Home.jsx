@@ -15,7 +15,7 @@ const Home = () => {
                     <p className="coordinates">
                         latitude: {weatherDetails.location.lat} &nbsp;&nbsp;
                         longitude: {weatherDetails.location.lon} <br />
-                        {`${(weatherDetails.location.localtime).split(" ")[0]}
+                        {`${(weatherDetails.location.localtime).split(" ")[0].replaceAll("-", "/")}
                          at ${(weatherDetails.current.last_updated).split(" ")[1]}`}
 
                     </p>

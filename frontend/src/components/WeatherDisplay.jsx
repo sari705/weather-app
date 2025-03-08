@@ -22,7 +22,7 @@ const WeatherDisplay = ({ weatherDetails }) => {
                 <div className="city-info">
                     <h1 className="city">{weatherDetails.location.region} </h1>
                     <h2 className="country">{weatherDetails.location.country}</h2>
-                    <p className="last-updated">{`${(weatherDetails.current.last_updated).split(" ")[0]} `}
+                    <p className="last-updated">{`${(weatherDetails.current.last_updated).split(" ")[0].replaceAll("-", "/")} `}
                         at{` ${(weatherDetails.current.last_updated).split(" ")[1]}`}
                     </p>
                 </div>
