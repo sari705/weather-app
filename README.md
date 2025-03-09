@@ -1,4 +1,4 @@
-# Weather App 🌤
+# Weather App
 
 A simple weather application built with **React** for the frontend and **Node.js (Express)** for the backend. The app allows users to search for a city's weather and displays real-time weather conditions.
 
