@@ -8,7 +8,7 @@ const weatherApiUri = process.env.WEATHER_API_URI;
 export async function getWeather(req, res) {
     const { city } = req.query;
     if (!city) {
-        return res.status(400).json({ title: "can't send response", message: "No city was sending" });
+        return res.status(400).json({ title: "Can't send response", message: "No city was sending" });
     }
 
     try {
