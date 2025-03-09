@@ -8,25 +8,26 @@ const SearchBar = (props) => {
     const [error, setError] = useState("")
 
     const getWeatherByCity = async () => {
+
         if (!choiseCity.trim()) {
             setError("Must enter a city name");
             return;
         }
-        if (/\d/.test(choiseCity)) {
-            setError("City name cannot contain numbers");
+
+        if (!/^[A-Za-z\s]+$/.test(choiseCity)) {
+            setError("City name can only contain English letters and spaces");
             return;
         }
+
         try {
-            const response = await getWeather(choiseCity)
-            if (response?.data) {
-                setWeatherDetails(response.data);
+            const response = await getWeather(choiseCity);
+            if (response.error) {
+                setError(response.error);
+            } else {
+                setWeatherDetails(response);
             }
-            else {
-                setError("No data received from API");
-            }
-        }
-        catch (e) {
-            setError(e.response?.data?.message || "Error fetching weather data");
+        } catch (e) {
+            setError("An unexpected error occurred");
         }
     }
 
