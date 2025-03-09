@@ -1,19 +1,18 @@
-# Weather App 🌤️
+# Weather App 🌤
 
 A simple weather application built with **React** for the frontend and **Node.js (Express)** for the backend. The app allows users to search for a city's weather and displays real-time weather conditions.
 
-## 📸 Preview
+##  Preview
 ![Website Preview](frontend/src/assets/images/screenshot.png)
-> Replace `./assets/weather-app-preview.png` with the actual path where your screenshot is stored.
 
 ---
 
 ## 📌 Features
-- 🌍 Search for weather in any city worldwide.
-- 🌡 Uses an external weather API.
-- 📊 Displays current temperature, humidity, wind speed, and precipitation.
-- 🥒 Shows hourly forecast (2 hours before and after the current time).
-- 🎨 Responsive and clean UI.
+-  Search for weather in any city worldwide.
+-  Uses an external weather API.
+-  Displays current temperature, humidity, wind speed, and precipitation.
+-  Shows hourly forecast (2 hours before and after the current time).
+-  Responsive and clean UI.
 
 ---
 
@@ -29,7 +28,7 @@ A simple weather application built with **React** for the frontend and **Node.js
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### **1️⃣ Clone the Repository**
 ```sh
@@ -52,7 +51,7 @@ npm install
 
 ---
 
-## 🏃‍♂️ Running the Application
+##  Running the Application
 
 ### **Start the Backend Server**
 1. Navigate to the `backend` folder.
@@ -80,7 +79,7 @@ npm install
 
 ---
 
-## 🐂 Project Structure
+##  Project Structure
 
 ```
 weather-app/
@@ -120,19 +119,3 @@ weather-app/
 │── README.md 
 
 ---
-
-## 📝 License
-This project is licensed under the **MIT License**. Feel free to modify and use it.
-
----
-
-## 📩 Contact
-If you have any questions, feel free to reach out!
-
-📧 Email: sari125705@gmail.com
-🐙 GitHub: sari705(https://github.com/sari705)
-
----
-
-This **README.md** provides everything a user needs to **install**, **run**, and **understand** your project. 🚀 Let me know if you need any adjustments! 🎯
-
