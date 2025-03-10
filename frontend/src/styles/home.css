@@ -24,7 +24,7 @@
     font-weight: 300;
     color: #707070;
     line-height: 1.5;
-    margin-top: 200px;
+    margin-top: 190px;
     margin-bottom: 4vh;
     align-items: flex-start;  
     opacity: 0.8;  
@@ -41,6 +41,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.weather-background {
+    height: 650px;
+    width: 700px;
+    background-color: #DDE4E6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 4px;
+    margin-top: 50px;
 }
 
 @media (max-width: 1024px) {

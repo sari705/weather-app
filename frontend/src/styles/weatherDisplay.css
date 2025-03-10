@@ -88,18 +88,6 @@
     color: white;
 }
 
-.weather-background {
-    height: 650px;
-    width: 700px;
-    background-color: #DDE4E6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    border-radius: 4px;
-    margin-top: 50px;
-}
-
 .weather-forecast {
     display: flex;
     flex-direction: column;

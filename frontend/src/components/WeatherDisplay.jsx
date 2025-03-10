@@ -39,7 +39,7 @@ const WeatherDisplay = ({ weatherDetails }) => {
     ];
 
     return (
-        <div className="weather-background">
+        // <div className="weather-background">
             <div className="weather-container">
 
                 <div className="city-info">
@@ -78,7 +78,7 @@ const WeatherDisplay = ({ weatherDetails }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        // </div>
     );
 }
 

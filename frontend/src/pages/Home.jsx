@@ -11,7 +11,7 @@ const Home = () => {
             <div className="left-section">
                 <h1>Use our weather app <br /> to see the weather <br /> around the world</h1>
                 <SearchBar setWeatherDetails={setWeatherDetails} />
-                {weatherDetails.location && (
+                {weatherDetails.location ? (
                     <p className="coordinates">
                         latitude: {weatherDetails.location.lat} &nbsp;&nbsp;
                         longitude: {weatherDetails.location.lon} <br />
@@ -19,11 +19,13 @@ const Home = () => {
                          at ${(weatherDetails.current.last_updated).split(" ")[1]}`}
 
                     </p>
-                )}
+                ): <p className="coordinates"></p>}
             </div>
 
             <div className="right-section">
-                {weatherDetails?.location && <WeatherDisplay weatherDetails={weatherDetails} />}
+                <div className="weather-background">
+                    {weatherDetails?.location && <WeatherDisplay weatherDetails={weatherDetails} />}
+                </div>
             </div>
         </div>
     );
